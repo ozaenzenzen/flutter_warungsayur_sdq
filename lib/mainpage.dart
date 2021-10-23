@@ -35,6 +35,8 @@ class _MainPageState extends State<MainPage> {
         Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
+            toolbarHeight: 70,
+            automaticallyImplyLeading: false,
             title: Padding(
               padding: const EdgeInsets.only(
                 left: 50,
@@ -112,7 +114,12 @@ class _MainPageState extends State<MainPage> {
     return OutlinedButton(
       onPressed: () {
         setState(() {
-          pageController.jumpToPage(page);
+          pageController.animateToPage(
+            page,
+            duration: Duration(milliseconds: 500),
+            curve: Curves.easeIn,
+          );
+          // pageController.jumpToPage(page);
         });
       },
       child: Text(
