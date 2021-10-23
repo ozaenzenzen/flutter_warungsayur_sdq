@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_warungsayur_sdq/aboutpage.dart';
 import 'package:flutter_warungsayur_sdq/app_color.dart';
+import 'package:flutter_warungsayur_sdq/homepage.dart';
+import 'package:flutter_warungsayur_sdq/orderpage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MainPage extends StatefulWidget {
@@ -18,6 +21,12 @@ class _MainPageState extends State<MainPage> {
   PageController pageController = PageController();
 
   int currentIndex = 0;
+
+  List page = [
+    HomePage(),
+    AboutPage(),
+    OrderPage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -62,26 +71,27 @@ class _MainPageState extends State<MainPage> {
           body: PageView.builder(
             controller: pageController,
             scrollDirection: Axis.vertical,
-            itemCount: 3,
+            itemCount: page.length,
             onPageChanged: (index) {
               setState(() {
                 currentIndex = index;
               });
             },
             itemBuilder: (context, index) {
-              return Container(
-                height: screenUtil.screenWidth,
-                width: screenUtil.screenWidth,
-                // color: Colors.blue,
-                child: Center(
-                  child: Text(
-                    "$index",
-                    style: TextStyle(
-                      fontSize: 40,
-                    ),
-                  ),
-                ),
-              );
+              return page[index];
+              // return Container(
+              //   height: screenUtil.screenWidth,
+              //   width: screenUtil.screenWidth,
+              //   // color: Colors.blue,
+              //   child: Center(
+              //     child: Text(
+              //       "$index",
+              //       style: TextStyle(
+              //         fontSize: 40,
+              //       ),
+              //     ),
+              //   ),
+              // );
             },
           ),
         ),
