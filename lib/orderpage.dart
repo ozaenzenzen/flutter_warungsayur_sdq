@@ -22,7 +22,7 @@ class _OrderPageState extends State<OrderPage> {
       decoration: const BoxDecoration(
           // color: AppColor.firstGreen1,
           ),
-      child: OutlinedButton(
+      child: ElevatedButton(
         onPressed: () {},
         child: Text(
           "Pesan Sekarang!",
@@ -32,12 +32,15 @@ class _OrderPageState extends State<OrderPage> {
             fontWeight: FontWeight.w500,
           ),
         ),
-        style: OutlinedButton.styleFrom(
-            minimumSize: Size(
-              screenUtil.setWidth(200),
-              screenUtil.setHeight(50),
-            ),
-            padding: EdgeInsets.all(20)),
+        style: ElevatedButton.styleFrom(
+          primary: Colors.green,
+          minimumSize: Size(
+            screenUtil.setWidth(200),
+            screenUtil.setHeight(50),
+          ),
+          padding: EdgeInsets.all(20),
+          elevation: 1,
+        ),
       ),
     );
   }
