@@ -4,6 +4,7 @@ import 'package:flutter_warungsayur_sdq/aboutpage.dart';
 import 'package:flutter_warungsayur_sdq/app_color.dart';
 import 'package:flutter_warungsayur_sdq/homepage.dart';
 import 'package:flutter_warungsayur_sdq/orderpage.dart';
+import 'package:flutter_warungsayur_sdq/productpage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MainPage extends StatefulWidget {
@@ -22,9 +23,9 @@ class _MainPageState extends State<MainPage> {
 
   int currentIndex = 0;
 
-  List page = [
+  List page = const [
     HomePage(),
-    AboutPage(),
+    ProductPage(),
     OrderPage(),
   ];
 
