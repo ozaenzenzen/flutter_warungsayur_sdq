@@ -70,6 +70,7 @@ class _MainPageState extends State<MainPage> {
             ],
           ),
           body: PageView.builder(
+            pageSnapping: false,
             controller: pageController,
             scrollDirection: Axis.vertical,
             itemCount: page.length,
