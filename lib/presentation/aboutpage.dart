@@ -11,6 +11,7 @@ class AboutPage extends StatefulWidget {
 class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Container(
       alignment: Alignment.center,
       height: MediaQuery.of(context).size.height,
