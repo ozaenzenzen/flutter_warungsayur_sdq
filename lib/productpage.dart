@@ -33,7 +33,7 @@ class _ProductPageState extends State<ProductPage> {
                 "Our Products: ",
                 style: GoogleFonts.lato(
                   color: Colors.white,
-                  fontSize: screenUtil.setSp(50),
+                  fontSize: screenUtil.setSp(40),
                   fontWeight: FontWeight.normal,
                 ),
               ),
@@ -59,11 +59,11 @@ class _ProductPageState extends State<ProductPage> {
       children: [
         productGridCategory(index.toString()),
         SizedBox(
-          width: screenUtil.setWidth(20),
+          width: screenUtil.setWidth(10),
         ),
         productGridCategory(index.toString()),
         SizedBox(
-          width: screenUtil.setWidth(20),
+          width: screenUtil.setWidth(10),
         ),
         productGridCategory(index.toString()),
       ],
@@ -72,14 +72,22 @@ class _ProductPageState extends State<ProductPage> {
 
   Widget productGridCategory(String isi) {
     return Container(
-      height: 150,
-      width: 150,
+      height: 300,
+      width: 225,
       margin: EdgeInsets.symmetric(
-        vertical: screenUtil.setHeight(20),
-        horizontal: screenUtil.setWidth(20),
+        vertical: screenUtil.setHeight(15),
+        horizontal: screenUtil.setWidth(15),
       ),
       decoration: BoxDecoration(
         color: Colors.green.shade900,
+        boxShadow: const [
+          BoxShadow(
+            offset: Offset(0, 3),
+            color: Colors.black38,
+            spreadRadius: 1,
+            blurRadius: 7,
+          ),
+        ],
       ),
       alignment: Alignment.center,
       child: Text(
