@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_warungsayur_sdq/app_color.dart';
+import 'package:flutter_warungsayur_sdq/utils/app_color.dart';
 
 class AboutPage extends StatefulWidget {
   const AboutPage({ Key? key }) : super(key: key);

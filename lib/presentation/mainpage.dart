@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_warungsayur_sdq/aboutpage.dart';
-import 'package:flutter_warungsayur_sdq/app_color.dart';
-import 'package:flutter_warungsayur_sdq/homepage.dart';
-import 'package:flutter_warungsayur_sdq/orderpage.dart';
-import 'package:flutter_warungsayur_sdq/productpage.dart';
+import 'package:flutter_warungsayur_sdq/presentation/productpage.dart';
+import 'package:flutter_warungsayur_sdq/utils/app_color.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'homepage.dart';
+import 'orderpage.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
